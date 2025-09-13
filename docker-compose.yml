@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  docling-app:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./uploads:/app/uploads
+    restart: unless-stopped
+    environment:
+      - PORT=8080
